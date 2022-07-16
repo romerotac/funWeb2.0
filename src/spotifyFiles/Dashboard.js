@@ -69,8 +69,8 @@ export default function Dashboard({code}) {
 }
 
   const getArtistName = (artist) => {
-    if (artist.split('').length > 20){
-        return <h1>too long</h1>
+    if (String(artist.split('')).length > 40){
+        return <h1 className='toolong'>{artist}</h1>
     }else{
       return <h1>{artist}</h1>
     }
@@ -81,7 +81,7 @@ export default function Dashboard({code}) {
     <div className='body-container'>
     <div className='containter'>
       {access ? 
-        getArtistName('hello')
+        getArtistName(songList[random].title)
         
          : null}
       

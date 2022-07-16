@@ -24,6 +24,10 @@ h1{
     margin-top: 1%;
 }
 
+h1.toolong {
+    font-size: 20px;
+}
+
 h2{
     display: flex;
     align-content: center;
