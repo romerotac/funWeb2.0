@@ -1,0 +1,174 @@
+
+@font-face {
+    font-family: 'Gotham';
+    font-weight: bold;
+    src: url("../Gotham-font-family/Gotham-font-family/Gotham/Gotham-Bold.otf") format("opentype");
+}
+
+*{
+    font-family: Gotham;
+}
+
+.body-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 4%;
+}
+
+h1{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 2%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+h2{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.cover {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.login_content{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 600px;
+    align-content: center;
+}
+
+.login_content button{
+    background-color: #1ed760;
+    border-color: black;
+    align-self: center;
+    height: 70px;
+    width: 160px;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.login_content button a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+
+.buttomPosition{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 4%;
+}
+
+.buttomPosition button{
+    display: inline-block; 
+	padding: 10px;
+	color: white;
+	position: sticky;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 4vw;
+    transition: all 0.3s ease;
+    background-color: #3498db;
+    cursor: pointer;
+    scroll-snap-align: center;
+    border-bottom-style: unset;
+    border-top-style: hidden;
+    border-right-style: none;
+    border-left-style: hidden;
+}
+
+
+.buttomPosition button::before{
+    position: absolute;
+	content: '';
+	transition: all .3s;
+    bottom: -13px;
+	height: 13px;
+	width: 100%;
+	left: 6px;
+	transform: skewX(45deg);
+	background-color: #196090;
+}
+
+.buttomPosition button::after{
+    position: absolute;
+	content: '';
+	transition: all .3s;
+    right: -13px;
+	height: 100%;
+	width: 13px;
+	bottom: -7.2px;
+	transform: skewY(45deg);
+	background-color: #124364;
+}
+
+.buttomPosition button:active{
+    margin-left: 10px;
+	margin-top: 10px;
+}
+
+.buttomPosition button:active::before{
+    bottom: -5px;
+    height: 5px;
+    left: 3px;
+}
+
+.buttomPosition button:active::after{
+    right: -5px;
+    width: 5px;
+    bottom: -3px;
+}
+
+
+
+.playerContainer{
+    opacity: 0.9;
+    padding: 2em;
+    z-index: 0;
+}
+
+
+.containter{
+ 
+    box-sizing: border-box;
+    width: 50%;
+    background: center;
+    border-style: solid;
+    border-radius: 0.5em;
+    height: 289px;
+    width: 534px;
+    background-image: url('../images/R1.jpg');
+    background-repeat: no-repeat;
+    background-size: 534px 289px;
+
+}
+
+
+
+
+.__mvqn38 {
+    display: none;
+}
+
+@media (max-width: 1023px)
+{
+    ._InfoRSWP.rswp__active {
+    display: none;
+    }
+}
+
