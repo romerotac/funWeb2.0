@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-around;
     padding: 4%;
+    
 }
 
 h1{
@@ -21,26 +22,21 @@ h1{
     justify-content: center;
     padding: 2%;
     text-align: center;
-    margin-top: 1%;
+    margin-top: 2%;
+
+    position: absolute;
+    width: 100%;
+    top: 4%;
 }
 
 h1.toolong {
     font-size: 25px;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    margin:2%
+    top:5%;
 }
 
 h1.tootoolong {
-    font-size: 20px;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+    font-size: 18px;
+    top: 6%;
 }
 
 h2{
@@ -48,17 +44,25 @@ h2{
     align-content: center;
     justify-content: center;
     padding: 2%;
+
+    position: absolute;
+    bottom: 25%;
+    width: 100%;
 }
 
 .cover {
     display: flex;
     align-content: center;
     justify-content: center;
+
+    position: absolute;
+    top: 28%;
+    width: 100%;
     
 }
 img.cover-image{
     padding: 2%;
-    background: white;
+    background: #dedede;
     border-style: solid;
 }
 
@@ -92,7 +96,7 @@ img.cover-image{
     align-content: center;
     justify-content: center;
     align-content: center;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 .buttomPosition button{
@@ -101,6 +105,7 @@ img.cover-image{
 	color: white;
 	position: sticky;
 	top: 50%;
+
 	left: 50%;
     transform: translate(-50%, -50%);
     vertical-align: middle;
@@ -164,11 +169,16 @@ img.cover-image{
     opacity: 0.9;
     padding: 2%;
     z-index: 0;
+
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 
 .containter{
- 
+
+    position: relative;
     box-sizing: border-box;
     width: 50%;
     background: center;

@@ -72,7 +72,7 @@ export default function Dashboard({code}) {
     if (String(artist.split('')).length <=30){
       return <h1>{artist}</h1>
         
-    }else if (String(artist.split('')).length <= 60){
+    }else if (String(artist.split('')).length <= 55){
       return <h1 className='toolong'>{artist}</h1>
     }else{
       return <h1 className='tootoolong'>{artist}</h1>
