@@ -1,60 +1,37 @@
 import React, { useState } from 'react';
-
+import {BsGithub, BsLinkedin} from 'react-icons/bs'
+import {AiFillFilePdf} from 'react-icons/ai';
 
 export const Contact = () => {
-
-    const [song,setSong] = useState("");
-    const [length,setLength] = useState("");
-    const [coverSong, setCoverSong] = useState("");
-    const [link, setLink] = useState("");
-
-
-
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '4b7b329e47msh3b23f1a1384fd74p1497d6jsnf8ac011be5ee',
-            'X-RapidAPI-Host': 'genius.p.rapidapi.com'
-        }
-    };
-    
-
-    function randomNumber (min,max){
-        return Math.floor(Math.random() * (max-min + 1)) + min;
-    }
-
-    const fecthMe = () => {
-
-    fetch('https://genius.p.rapidapi.com/artists/16775/songs', options)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            setLength(data.response.songs.length);
-            const position = randomNumber(0,length);
-
-            setSong(data.response.songs[position].full_title);
-            setCoverSong(data.response.songs[position].header_image_thumbnail_url);
-            setLink(data.response.songs[position].url);
-            
-        })
-        .catch(err => console.error(err));
-        }
-
 
     return (
         
         <>
-        <h1>Random Music Generator</h1>
-        <div className='title'>
-        <h2>{song}</h2>
-        <a href={link} target="_blank"><button>Click me to listen to the song </button></a>
+        <div className='body-aboutme'>
+        
+        <div className='row-1'>
+        <div className='column-1'>
+        <h1>About me</h1>
+        <p> Hi I'm Chrsitian Romero Taipe, the creator of this page. If you are reading this, it means that my personal project wasn't that bad and that you enjoyed ine of the two pages or maybe both. If you are intrested on knowing more about 
+            me down below this page you can find the soical media that i used as well as the source code of this project.
+        </p>
         </div>
-        <div className='cover'>
-        <img src={coverSong}/>
+        <div className='idk'>
+            <div className='image-position'> </div>
         </div>
-        <button onClick={fecthMe}>Find me somehitng to listen</button>
+        </div>
 
+        <div className='footer-aboutme'>
+        
+            <div className='button-position'> <button className='github-button'><BsGithub size={'1x'} className="icons"/></button></div>
+            <div className='button-position'> <button className='linkedin-button'><BsLinkedin size={'1x'} className="icons"/></button></div>
+            <div className='button-position'> <button className='file-button'><AiFillFilePdf size={'1x'} className="icons"/></button></div>
+            
+           
+        
+        </div>
+        
+        </div>
         </>
     );
 }

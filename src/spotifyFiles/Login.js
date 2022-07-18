@@ -7,7 +7,7 @@ export const Login = () => {
 
     return (
         <>
-        <h1>Random music generator with the usage of spotifyApi</h1>
+        <h1 className="title">Random music generator with the usage of spotifyApi</h1>
         <div className="login_content" >
         <button><a href={AUTH_URL}>Start</a></button>
         </div>

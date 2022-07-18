@@ -12,6 +12,11 @@
     background-size: cover;
 }
 
+h1.title{
+    text-align: center;
+    padding: 2%;
+}
+
 .header{
     display: flex;
     justify-content: center;
@@ -25,11 +30,15 @@
     color:white;
     text-shadow: 0 0 4px black;
     font-size: 40px;
+    text-align: center;
     
 }
 
 .sub_header{
-    margin-top: -15px;
+    
+    margin-top: 0.5%;
+    margin-bottom: 1.5%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +49,7 @@
     color:#FF0000;
     text-shadow: 0 0 4px black;
     font-size: 23px;
+    text-align: center;
 }
 
 .card{
@@ -102,4 +112,14 @@
     font-size: 34px;
     box-sizing: border-box;
     padding: 30px;
+}
+
+.body-aboutme h1{
+    text-align: center;
+    margin: 2%;
+}
+
+.body-aboutme p{
+    text-align: center;
+    margin: 2%;
 }

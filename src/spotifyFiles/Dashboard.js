@@ -70,7 +70,7 @@ export default function Dashboard({code}) {
 
   const getArtistName = (artist) => {
     if (String(artist.split('')).length <=30){
-      return <h1>{artist}</h1>
+      return <h1 className='normal'>{artist}</h1>
         
     }else if (String(artist.split('')).length <= 55){
       return <h1 className='toolong'>{artist}</h1>
@@ -92,7 +92,7 @@ export default function Dashboard({code}) {
       {access ? <img className='cover-image' src = {songList[random].albumUrl}></img> : null}
       </div>
 
-      {access ? <h2>{songList[random].artist}</h2> : null}
+      {access ? <h2 className='artist'>{songList[random].artist}</h2> : null}
 
       <div className='playerContainer'>
       <Player accessToken={accessToken} trackUri={access ? songList[random].uri : []}/>
