@@ -224,27 +224,33 @@ img.cover-image{
 }
 
 
-
-
-
 .body-aboutme .row-1 .idk{
     align-self: center;
     justify-self: center;
+    
+}
+.body-aboutme .row-1 .column-1{
+    font-family: cursive;
 }
 
-.body-aboutme h1{
+.body-aboutme .row-1 .column-1 p{
+    font-size: 20px;
+}
+
+.body-aboutme .row-1 .column-1 h1{
     padding-bottom: 0%;
+    font-size: 37px;
 }
 
 .body-aboutme{
     overflow: hidden;
     margin: 4%;
+    padding-top: 3%;
 }
 
 .body-aboutme .row-1{
     display: grid;
-    grid-template-columns: 7fr 3fr;
-    gap: 20px;
+    grid-template-columns: 5fr 3fr;
 }
 
 
@@ -348,6 +354,10 @@ img.cover-image{
         grid-template-columns: 1fr;
         gap: 0px;
         grid-auto-rows: minmax(80px, auto);
+    }
+
+    .body-aboutme .row-1 .idk {
+        margin-top: 5%;
     }
 
 }
