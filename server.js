@@ -3,13 +3,31 @@ const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-;
+
 
 const port = 3001
 const app = express()
 
-app.use(cors())
+
 app.use(bodyParser.json())
+
+
+//added for heroku
+const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://myfunweb.herokuapp.com']
+const corsOptions = {
+  origin: function (origin, callback) {
+    console.log("** Origin of request " + origin)
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Origin acceptable")
+      callback(null, true)
+    } else {
+      console.log("Origin rejected")
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+app.use(cors(corsOptions))
 
 
 app.post('/refresh', (res,req) => {
@@ -61,6 +79,15 @@ app.post('/login', (req,res) => {
     })
 
 
+ // added for heorku
+    if (process.env.NODE_ENV === 'production') {
+        // Serve any static files
+        app.use(express.static(path.join(__dirname, 'client/build')));
+      // Handle React routing, return all requests to React app
+        app.get('*', function(req, res) {
+          res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+        });
+      }
 
 
 app.listen(3001, () => {
