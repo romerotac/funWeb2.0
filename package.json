@@ -8,7 +8,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "helmet": "^3.23.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "spotify-web-api-js": "^1.5.2",
+    "spotify-web-api-node": "^5.0.2"
   },
   "scripts": {
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
