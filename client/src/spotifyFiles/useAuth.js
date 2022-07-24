@@ -12,7 +12,7 @@ export default function useAuth(code) {
     
 
     axios
-    .post('http://localhost:3001/login', {code,})
+    .post('https://myfunweb.herokuapp.com/login', {code,})
     .then(res => {
         setAccessToken(res.data.accessToken)
         setExpiresIn(res.data.expiresIn)
@@ -30,7 +30,7 @@ export default function useAuth(code) {
 
     
     axios
-    .post('http://localhost:3001/refresh', {
+    .post('https://myfunweb.herokuapp.com/refresh', {
         refreshToken,
     })
     .then(res => {

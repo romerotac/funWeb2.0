@@ -8,6 +8,7 @@ const path = require('path');
 
 const app = express()
 
+const PORT = process.env.PORT || 3001
 
 app.use(bodyParser.json())
 
@@ -92,7 +93,7 @@ app.post('/login', (req,res) => {
       }
 
 
-const PORT = process.env.PORT || 3001
+
 
 app.listen(PORT, (req,res) => {
     console.log(`express app listening on port ${PORT}`)
