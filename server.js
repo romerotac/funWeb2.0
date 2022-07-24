@@ -35,7 +35,7 @@ app.use(cors(corsOptions))
 app.post('/refresh', (res,req) => {
     const refreshToken = req.body.refreshToken
     const spotifyApi = new SpotifyWebApi({
-        redirectUri:'http://localhost:3000',
+        redirectUri:'https://myfunweb.herokuapp.com',
         clientId: '49fb612d070040f9a34236837ab79ad3',
         clientSecret: '4a45e17ddf794a1a89a32dd345095f01',
         refreshToken      
@@ -58,7 +58,7 @@ app.post('/refresh', (res,req) => {
 app.post('/login', (req,res) => {
     const code = req.body.code
     const spotifyApi = new SpotifyWebApi({
-        redirectUri:'http://localhost:3000',
+        redirectUri:'https://myfunweb.herokuapp.com',
         clientId: '49fb612d070040f9a34236837ab79ad3',
         clientSecret: '4a45e17ddf794a1a89a32dd345095f01',
     })
