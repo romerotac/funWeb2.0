@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 
 //added for heroku
-const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://shielded-fjord-18437.herokuapp.com/']
+const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://myfunweb.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
