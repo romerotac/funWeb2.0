@@ -3,9 +3,9 @@ const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 
 
-const port = 3001
 const app = express()
 
 
@@ -26,6 +26,8 @@ const corsOptions = {
     }
   }
 }
+
+app.use(helmet())
 
 app.use(cors(corsOptions))
 
@@ -90,6 +92,8 @@ app.post('/login', (req,res) => {
       }
 
 
-app.listen(3001, () => {
-    console.log(`express app listening on port ${port}`)
+const PORT = process.env.PORT || 3001
+
+app.listen(PORT, (req,res) => {
+    console.log(`express app listening on port ${PORT}`)
 })
