@@ -4,7 +4,7 @@ const SpotifyWebApi = require('spotify-web-api-node');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-
+const path = require('path');
 
 const app = express()
 
